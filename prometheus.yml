@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 1s # Atualiza os gráficos a cada 1 segundo
+
+scrape_configs:
+  - job_name: 'tp1_ia_cpp'
+    static_configs:
+      # host.docker.internal permite que o container acesse o seu C++ rodando na máquina local
+      - targets: ['host.docker.internal:8080']
